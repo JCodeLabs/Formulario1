@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <img
+        src="../img/status-1.png"
+        alt="Etapa uno de tres"
+        class="formulario__etapas"
+      />
+      <h2 class="titulo">
+        ¡Completa los campos a continuación para crear tu cuenta corriente!
+      </h2>
+    </header>
+
+    <section class="container">
+      <form class="form" data-formulario>
+        <!-- Campo -->
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="nombre">Nombre</label>
+          <input
+            name="nombre"
+            id="nombre"
+            class="form__input"
+            type="text"
+            minlength="3"
+            required
+          />
+          <span class="message__error"></span>
+        </fieldset>
+        <!-- Campo -->
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="email">E-mail</label>
+          <input
+            name="email"
+            id="email"
+            class="form__input"
+            type="email"
+            minlength="5"
+            required
+          />
+          <span class="message__error"></span>
+        </fieldset>
+        <!-- Campo -->
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="identificacion"
+            >Identificación</label
+          >
+          <input
+            name="identificacion"
+            id="identificacion"
+            class="form__input form__input-short"
+            type="text"
+            minlength="8"
+            required
+          />
+          <span class="message__error"></span>
+        </fieldset>
+        <!-- Campo -->
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="cuil"
+            >CUIL/CUIT (Solo números)</label
+          >
+          <input
+            name="cuil"
+            id="cuil"
+            class="form__input form__input-short"
+            type="text"
+            minlength="10"
+            maxlength="14"
+            pattern="\d{2}-?\d{8}-?\d{1}"
+            required
+          />
+          <span class="message__error"></span>
+        </fieldset>
+        <!-- Campo -->
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="fecha_nacimiento">
+            Fecha de nacimiento
+          </label>
+          <input
+            name="fecha_nacimiento"
+            id="fecha_nacimiento"
+            class="form__input form__input-short"
+            type="date"
+            required
+          />
+          <span class="message__error"></span>
+        </fieldset>
+        <!-- Boton -->
+        <fieldset class="form__fieldset">
+          <input
+            name="terminos"
+            class="form__input-terms"
+            type="checkbox"
+            required
+          />
+          <p class="terms">
+            He leído y conozco las condiciones para el tratamiento de mis datos
+            descrito en las <a href="#">Políticas de Privacidad</a>.
+          </p>
+          <span class="message__error"></span>
+        </fieldset>
+  
+        <div>
+          <input
+            value="Siguiente"
+            class="form__submitbtn"
+            id="enviar"
+            type="submit"
+            data-boton-enviar
+          />
+        </div>
+      </form>
+    </section>
+    <!-- custom scripts -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
